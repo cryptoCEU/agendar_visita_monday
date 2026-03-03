@@ -99,7 +99,6 @@ async function createAppointment({ user_name, user_email, dateStr, timeStr, endD
       create_item(board_id: $boardId, item_name: $itemName, column_values: $columnValues) {
         id
         name
-        url: permalink
       }
     }
   `, {
@@ -160,7 +159,7 @@ export default async function handler(req, res) {
         end_time: endDisplay,
         client: user_name,
         email: user_email,
-        monday_url: item?.url || null,
+        
       },
     });
   } catch (err) {

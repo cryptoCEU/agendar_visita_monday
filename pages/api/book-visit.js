@@ -103,7 +103,7 @@ async function createAppointment({ user_name, user_email, dateStr, timeStr, endD
     }
   `, {
     boardId: MONDAY_BOARD_ID,
-    itemName: `Visita - ${user_name}`,
+    itemName: user_name,
     columnValues: JSON.stringify(columnValues),
   });
 
